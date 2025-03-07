@@ -7,6 +7,7 @@ import Projects from "./Projects";
 import Tech from "./Tech";
 import Exp from "./Exp";
 import Contact from "./Contact";
+import Education from "./Education";
 
 function Home() {
   const cursorRef = useRef<HTMLDivElement>(null);
@@ -91,6 +92,7 @@ function Home() {
       <About />
       <Projects />
       <Tech />
+      <Education/>
       <Exp />
       <Contact />
 

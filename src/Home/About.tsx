@@ -30,7 +30,7 @@ function About() {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col lg:flex-row justify-between items-center text-white px-6 sm:px-12 lg:px-26 z-[20] relative mb-20 lg:mb-6" id="About">
+    <div className="min-h-screen flex flex-col lg:flex-row justify-between items-center text-white px-6 sm:px-12 lg:px-26 z-[20] relative mb-20 lg:mb-0" id="About">
       <div className="w-full flex flex-col lg:flex-row justify-center items-center gap-8">
         
         {/* Image Section */}
