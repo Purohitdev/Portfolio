@@ -8,6 +8,7 @@ import Tech from "./Tech";
 import Exp from "./Exp";
 import Contact from "./Contact";
 import Education from "./Education";
+import Loading from "../Loading";
 
 function Home() {
   const cursorRef = useRef<HTMLDivElement>(null);
@@ -87,6 +88,7 @@ function Home() {
 
   return (
     <>
+         <Loading/>
       <Nav />
       <Hero />
       <About />
