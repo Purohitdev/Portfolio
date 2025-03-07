@@ -89,7 +89,7 @@ function Home() {
   return (
     <>
          <Loading/>
-      <Nav />
+      {/* <Nav /> */}
       <Hero />
       <About />
       <Projects />
