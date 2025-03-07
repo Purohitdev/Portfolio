@@ -5,7 +5,7 @@ import { FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
 const socialLinks = [
   { name: "Send an email", icon: FaEnvelope, url: "mailto:shilwantgupta147@gmail.com" },
   { name: "LinkedIn", icon: FaLinkedin, url: "https://www.linkedin.com/in/shilwantgupta/" },
-  { name: "GitHub", icon: FaGithub, url: "https://github.com/" } // Add your GitHub URL
+  { name: "GitHub", icon: FaGithub, url: "https://github.com/shilwantgupta" } // Add your GitHub URL
 ];
 
 function About() {

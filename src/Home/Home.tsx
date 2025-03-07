@@ -1,12 +1,10 @@
-"use client";
-
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import Nav from "../Nav";
 import Hero from "./Hero";
 import About from "./About";
 import Projects from "./Projects";
-import Tech from "./Tech"
+import Tech from "./Tech";
 import Exp from "./Exp";
 import Contact from "./Contact";
 
@@ -35,9 +33,10 @@ function Home() {
 
   useEffect(() => {
     const updateCursorEffect = () => {
-      const interactiveElements = document.querySelectorAll("h1, p , img , .box , span ");
+      const elements = document.querySelectorAll("h1, p, img, .box, span");
+      const navSpans = document.querySelectorAll("#Nav span");
 
-      interactiveElements.forEach((element) => {
+      elements.forEach((element) => {
         element.addEventListener("mouseenter", () => {
           gsap.to(cursorRef.current, {
             scale: 4,
@@ -51,16 +50,31 @@ function Home() {
             scale: 1,
             backgroundColor: "transparent",
             duration: 0.2,
+          });
+        });
+      });
 
+      navSpans.forEach((navSpan) => {
+        navSpan.addEventListener("mouseenter", () => {
+          gsap.to(cursorRef.current, {
+            scale: 2, // Smaller scale for nav spans
+            backgroundColor: "rgba(255, 255, 255, 0.75)",
+            duration: 0.2,
+          });
+        });
+
+        navSpan.addEventListener("mouseleave", () => {
+          gsap.to(cursorRef.current, {
+            scale: 1,
+            backgroundColor: "transparent",
+            duration: 0.2,
           });
         });
       });
     };
 
-    // Initial setup
     updateCursorEffect();
 
-    // Watch for new elements using MutationObserver
     const observer = new MutationObserver(() => {
       updateCursorEffect();
     });
@@ -75,10 +89,10 @@ function Home() {
       <Nav />
       <Hero />
       <About />
-      <Projects/>
-      <Tech/>
-      <Exp/>
-      <Contact/>
+      <Projects />
+      <Tech />
+      <Exp />
+      <Contact />
 
       {/* Cursor Follower */}
       <div

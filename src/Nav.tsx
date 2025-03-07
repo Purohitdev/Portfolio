@@ -19,7 +19,7 @@ const Navbar = () => {
 
   return (
 <div className="fixed top-0 right-0 w-full flex items-center text-white py-6 px-3 sm:px-28 backdrop-blur-md bg-black-400/10 z-[50] 
-                justify-center sm:justify-between">
+                justify-center sm:justify-between" id="Nav">
 <h1 className="font-bold text-[1.5rem] capitalize sm:block hidden">Shilwant</h1>
 
       {/* Nav Items - Scrollable on small screens */}

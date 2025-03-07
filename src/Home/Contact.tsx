@@ -5,7 +5,7 @@ const socialLinks = [
   { name: "Send an email", icon: FaEnvelope, url: "mailto:shilwantgupta147@gmail.com", bg: "#353535" },
   { name: "LinkedIn", icon: FaLinkedin, url: "https://www.linkedin.com/in/shilwantgupta/", bg: "#353535" },
   { name: "X (Twitter)", icon: FaTwitter, url: "https://twitter.com/yourprofile", bg: "#353535" },
-  { name: "GitHub", icon: FaGithub, url: "https://github.com/yourgithub", bg: "#353535" }
+  { name: "GitHub", icon: FaGithub, url: "https://github.com/shilwantgupta", bg: "#353535" }
 ];
 
 const Contact = () => {
