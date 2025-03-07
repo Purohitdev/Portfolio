@@ -38,7 +38,7 @@ const Projects: React.FC = () => {
     }, []);
 
     return (
-        <div className='min-h-screen w-full relative z-[20] text-white px-6 sm:px-12 lg:px-26 flex flex-col gap-8 items-center pb-12'>
+        <div className='min-h-screen w-full relative z-[20] text-white px-6 sm:px-12 lg:px-26 flex flex-col gap-8 items-center pb-12'id="Project">
             <div className="w-full sm:w-2/3 flex flex-col items-center justify-center text-center">
                 <p className='font-extralight opacity-50 text-sm sm:text-[1rem]'>SHOWCASE</p>
                 <h1 className='font-light text-2xl sm:text-[3rem] mt-2'>Featured Projects</h1>

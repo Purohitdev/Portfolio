@@ -1,13 +1,15 @@
-
-
 import { useRef, useEffect } from "react";
 import { gsap } from "gsap";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import Marquee from "react-fast-marquee";
 import { FaCode, FaNodeJs, FaReact, FaDatabase, FaServer, FaCloud, FaLaptopCode } from "react-icons/fa";
 import { FaArrowDownLong } from "react-icons/fa6";
 
+gsap.registerPlugin(ScrollToPlugin); // Register ScrollToPlugin for smooth scrolling
+
 function Hero() {
     const fullStackText = useRef<HTMLHeadingElement | null>(null);
+    const scrollButton = useRef<HTMLButtonElement | null>(null);
 
     useEffect(() => {
         if (!fullStackText.current || window.innerWidth < 768) return; // Disable animation on small screens
@@ -34,6 +36,24 @@ function Hero() {
         };
     }, []);
 
+    useEffect(() => {
+        if (!scrollButton.current) return;
+
+        // Scroll indication animation (bouncing effect)
+        gsap.to(scrollButton.current, {
+            y: -10,
+            repeat: -1,
+            yoyo: true,
+            duration: 1,
+            ease: "power1.inOut",
+        });
+    }, []);
+
+    // Smooth Scroll Function
+    const handleScroll = () => {
+        gsap.to(window, { duration: 1, scrollTo: "#About", ease: "power2.inOut" });
+    };
+
     const marqueeItems = [
         { name: "Full-Stack", icon: <FaCode /> },
         { name: "Node.js", icon: <FaNodeJs /> },
@@ -45,9 +65,9 @@ function Hero() {
     ];
 
     return (
-        <div className="h-screen w-full flex flex-col justify-center items-center text-white relative px-4">
+        <div className="h-screen w-full flex flex-col justify-center items-center text-white relative px-4" id="Home">
             {/* Hero Content */}
-            <div className="h-[70vh] w-full flex flex-col justify-center items-center text-center ">
+            <div className="h-[70vh] w-full flex flex-col justify-center items-center text-center">
                 <h1
                     ref={fullStackText}
                     className="dynamic-text leading-none uppercase font-black opacity-30 sm:cursor-pointer"
@@ -61,7 +81,11 @@ function Hero() {
                 <div className="mt-5 flex flex-col gap-4 items-center justify-center w-full max-w-[600px]">
                     <p className="text-sm sm:text-base">Scroll down for more information...</p>
                     <hr className="w-full border-t border-gray-300" />
-                    <button className="px-4 py-4 border text-lg sm:text-2xl rounded-full bg-[#ffffff70] text-[#161818] w-fit opacity-60">
+                    <button 
+                        ref={scrollButton}
+                        onClick={handleScroll} // Call smooth scroll function
+                        className="px-4 py-4 border text-lg sm:text-2xl rounded-full bg-[#ffffff70] text-[#161818] w-fit opacity-60 transition-transform hover:scale-110"
+                    >
                         <FaArrowDownLong />
                     </button>
                 </div>

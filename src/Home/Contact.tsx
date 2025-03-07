@@ -12,7 +12,7 @@ const Contact = () => {
   const [email] = useState("");
 
   return (
-    <section className="w-full py-16 px-6 text-white relative">
+    <section className="w-full py-16 px-6 text-white relative" id="Contact">
       <div className="flex flex-col items-center text-center">
         <p className="font-extralight opacity-50 text-lg sm:text-base">CONTACT</p>
         <h1 className="font-light text-[2.5rem] sm:text-[3rem] mt-2">Let's Connect</h1>

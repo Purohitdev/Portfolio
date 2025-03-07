@@ -55,7 +55,7 @@ const experiences = [
 
 function Exp() {
   return (
-    <section className="w-full py-20 px-6 text-white relative z-[20]">
+    <section className="w-full py-20 px-6 text-white relative z-[20]" id="Exp">
       <div className="flex justify-center items-center">
         <div className="w-full max-w-2xl flex flex-col items-center justify-center text-center">
           <p className="font-extralight opacity-50 text-[1rem]">EXPERIENCE</p>
