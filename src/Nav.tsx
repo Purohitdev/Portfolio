@@ -20,7 +20,11 @@ const Navbar = () => {
   return (
     <div className="fixed top-0 right-0 w-full flex items-center text-white py-6 px-3 sm:px-28 backdrop-blur-md bg-black-400/10 z-[50] 
                 justify-center sm:justify-between" id="Nav">
-      <h1 className="font-bold text-[1.5rem] capitalize sm:block hidden">Shilwant</h1>
+      <h1 className="font-bold text-[1.5rem] capitalize sm:block hidden">
+        <a href="/">
+        Shilwant
+        </a>
+      </h1>
 
       {/* Nav Items - Scrollable on small screens */}
       <div className="flex bg-[#161818] items-center gap-2 px-4 sm:px-6 py-2 border border-white/20 shadow-lg rounded-full 
@@ -38,7 +42,9 @@ const Navbar = () => {
       </div>
 
       {/* Profile Icon */}
-      <div className="hidden sm:flex h-[40px] w-[40px] rounded-full border border-white bg-white"></div>
+      <div className="hidden sm:flex h-[40px] w-[40px] rounded-full border border-white bg-white overflow-hidden ">
+        <img src="https://i.pinimg.com/736x/7c/8a/67/7c8a67c3242f50448bcefaa553f61cf2.jpg" alt="Shilwant image" />
+      </div>
     </div>
   );
 };

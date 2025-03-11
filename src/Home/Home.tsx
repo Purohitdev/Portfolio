@@ -22,6 +22,7 @@ function Home() {
         y: e.clientY,
         duration: 0.1,
         ease: "power2.out",
+        delay:0.05,
       });
     };
 
