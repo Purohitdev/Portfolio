@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
 
+
 const socialLinks = [
   { name: "Send an email", icon: FaEnvelope, url: "mailto:shilwantgupta147@gmail.com" },
   { name: "LinkedIn", icon: FaLinkedin, url: "https://www.linkedin.com/in/shilwantgupta/" },
@@ -80,3 +81,4 @@ function About() {
 }
 
 export default About;
+

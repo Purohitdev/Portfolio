@@ -5,25 +5,33 @@ import { useState, useEffect } from "react";
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { FaReact } from "react-icons/fa";
+import { MdOutlineArrowOutward } from "react-icons/md";
+
+
 
 const projects = [
     {
         year: "2024",
         title: "Medium Clone",
         description: "A full-stack blogging platform inspired by Medium with authentication, rich text editing, and responsive design.",
-        techStack: ["Express.js", "Node.js", "MongoDB", "TailwindCSS", "EJS"]
+        techStack: ["Express.js", "Node.js", "MongoDB", "TailwindCSS", "EJS"],
+        link: ""
     },
     {
         year: "2023",
         title: "Portfolio Website",
         description: "Designed and developed a sleek, interactive portfolio to showcase projects and skills.",
-        techStack: ["React", "Next.js", "TailwindCSS", "Vercel"]
+        techStack: ["React", "Next.js", "TailwindCSS", "Vercel"],
+        link: ""
+
     },
     {
         year: "2024",
         title: "Medium Clone",
         description: "A full-stack blogging platform inspired by Medium with authentication, rich text editing, and responsive design.",
-        techStack: ["React", "Firebase", "Chakra UI"]
+        techStack: ["React", "Firebase", "Chakra UI"],
+        link: ""
+
     }
 ];
 
@@ -38,7 +46,7 @@ const Projects: React.FC = () => {
     }, []);
 
     return (
-        <div className='min-h-screen w-full relative z-[20] text-white px-6 sm:px-12 lg:px-26 flex flex-col gap-8 items-center pb-12'id="Project">
+        <div className='min-h-screen w-full relative z-[20] text-white px-6 sm:px-12 lg:px-26 flex flex-col gap-8 items-center pb-12' id="Project">
             <div className="w-full sm:w-2/3 flex flex-col items-center justify-center text-center">
                 <p className='font-extralight opacity-50 text-sm sm:text-[1rem]'>SHOWCASE</p>
                 <h1 className='font-light text-2xl sm:text-[3rem] mt-2'>Featured Projects</h1>
@@ -73,6 +81,14 @@ const Projects: React.FC = () => {
                                 </span>
                             ))}
                         </div>
+
+
+                    <div className="flex justify-end mt-3 ">
+                    <a href={project.link} target="_blank" >
+                            <p className="flex gap-2 items-center">Visit project <MdOutlineArrowOutward/> </p>
+                        </a>
+                    </div>
+
                     </VerticalTimelineElement>
                 ))}
             </VerticalTimeline>
